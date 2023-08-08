@@ -35,7 +35,11 @@ public class Assignment2
 		LocalDate todaysDate = LocalDate.now();
 		age = Period.between(birthDate, todaysDate).getYears(); 
 		LocalDate retirementDate = birthDate.plusYears(retirementAge);
-		
+		if(age < 18)
+		{
+			System.out.println("You are not eligible !");
+			return;
+		}
 		
 		System.out.println("Enter your salary details : ");
 		float da_percent = 2f;
